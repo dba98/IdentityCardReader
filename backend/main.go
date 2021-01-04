@@ -1,13 +1,10 @@
 package main
 
 import (
+	"IdentityCardReader/backend/model"
+	"IdentityCardReader/backend/routes"
+	"IdentityCardReader/backend/services"
 
-	// Other imports
-
-	"PAWPAMFinal/backend/routes"
-
-	"github.com/JsBraz/ProjetoAppWeb/backend/model"
-	"github.com/JsBraz/ProjetoAppWeb/backend/services"
 	"github.com/gin-gonic/gin"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	swaggerFiles "github.com/swaggo/files"
@@ -25,6 +22,8 @@ func init() {
 }
 
 func main() {
+
+	services.CardImageDecrypt()
 
 	services.FormatSwagger()
 

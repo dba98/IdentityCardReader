@@ -2,7 +2,7 @@ package services
 
 import (
 	// Local imports
-	"github.com/JsBraz/ProjetoAppWeb/backend/model"
+	"IdentityCardReader/backend/model"
 
 	// Other imports
 	"fmt"

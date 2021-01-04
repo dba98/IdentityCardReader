@@ -2,8 +2,9 @@ package controllers
 
 import (
 	// Local imports
-	"github.com/JsBraz/ProjetoAppWeb/backend/model"
-	"github.com/JsBraz/ProjetoAppWeb/backend/services"
+
+	"IdentityCardReader/backend/model"
+	"IdentityCardReader/backend/services"
 
 	// Other imports
 	"net/http"

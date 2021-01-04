@@ -2,7 +2,7 @@ package routes
 
 import (
 	// Local imports
-	"github.com/JsBraz/ProjetoAppWeb/backend/controllers"
+	"IdentityCardReader/backend/controllers"
 
 	// Other imports
 	"github.com/gin-gonic/gin"

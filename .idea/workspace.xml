@@ -10,7 +10,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="" />
+    <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/IdentityCardReader.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/services/gosseract.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/cardinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/cardinfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/checkout.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/checkout.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/IdentityCard.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/IdentityCard.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/Users.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/Users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/Users_Locations.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/cardInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/cardInfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/checkout.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/checkout.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/middlewares.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/middlewares.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/swagger.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/swagger.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +44,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -32,8 +58,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,6 +75,26 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbor\go\src\IdentityCardReader\backend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="IdentityCardReader" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/backend/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,5 +129,74 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="827" y="411" key="#ESLint/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609618960013" />
+    <state x="552" y="178" width="816" height="730" key="#Intentions" timestamp="1609714294671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" width="816" height="730" key="#Intentions/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609714294671" />
+    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609717498096">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717498096" />
+    <state width="602" height="635" key="DebuggerActiveHint" timestamp="1609717217669">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="602" height="635" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717217669" />
+    <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1609717449549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
+    <state width="1877" height="340" key="GridCell.Tab.0.center" timestamp="1609717449549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
+    <state width="1877" height="340" key="GridCell.Tab.0.left" timestamp="1609717449549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
+    <state width="1877" height="340" key="GridCell.Tab.0.right" timestamp="1609717449549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1609717450023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450022" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1609717450021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450021" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1609717450021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450021" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1609717450022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450022" />
+    <state x="785" y="279" key="refactoring.ChangeSignatureDialog" timestamp="1609714475831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="785" y="279" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609714475831" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/backend/main.go</url>
+          <line>16</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/backend/main.go</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go</url>
+          <line>68</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

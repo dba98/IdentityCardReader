@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"PAWPAMFinal/backend/controllers"
+	"IdentityCardReader/backend/controllers"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,7 +19,7 @@ func DeleteIdentityCardInfo(c *gin.Context) {
 }
 
 func GetAllIdentityCardInfo(c *gin.Context) {
-	controllers.GetAllIdentityCardInfo()
+	controllers.GetAllIdentityCardInfo(c)
 }
 
 func GetIdentityCardInfo(c *gin.Context) {

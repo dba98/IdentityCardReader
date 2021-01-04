@@ -2,7 +2,7 @@ package services
 
 import (
 	// Local imports
-	"github.com/JsBraz/ProjetoAppWeb/backend/docs"
+	"IdentityCardReader/backend/docs"
 )
 
 func FormatSwagger() {

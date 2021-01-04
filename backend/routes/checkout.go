@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/dba98/IdentityCardReader/backend/controllers"
+	"IdentityCardReader/backend/controllers"
 
 	// Other imports
 	"github.com/gin-gonic/gin"

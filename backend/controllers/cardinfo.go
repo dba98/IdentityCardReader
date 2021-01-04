@@ -1,12 +1,6 @@
 package controllers
 
 import (
-	"net/http"
-	"projetoapi/model"
-	"projetoapi/services"
-	"strconv"
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,21 +8,19 @@ import (
  * Procura na lista de faturas do utilizador se existe uma fatura com o id enviado por parâmetro
  * nos parâmetros tem que contar o ID do user e o ID da fatura
 **/
-func GetInvoice(c *gin.Context) {
+func GetIdentityCardInfo(c *gin.Context) {
 
-	// Vai buscar o ID e verifica se é nulo ou não
-	invoice_ID, err := strconv.ParseUint(c.Param("invoiceID"), 10, 32)
-
+	/*IdentitycardinfoId, err := strconv.ParseUint(c.Param("invoiceID"), 10, 32)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Invalid Invoice ID!"})
 		return
 	}
 
-	uintID := uint(invoice_ID)
+	uintID := uint(IdentitycardinfoId)
 
 	// Vai buscar a lista de invoices e verifica se é nula ou não
 
-	var listInvoices = GetUserInvoices(c)
+	var listInvoices = GetAll(c)
 
 	if listInvoices == nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Lista de faturas vazia!"})
@@ -45,14 +37,14 @@ func GetInvoice(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Não existe na sua lista de faturas!"})
-	return
+	return*/
 
 }
 
 /**
 * Adiciona à tabela das faturas uma nova fatura com todos os parâmetros da mesma
 **/
-func AddInvoice(c *gin.Context) {
+func AddIdentityCardInfo(c *gin.Context) {
 
 	/*var addr = flag.String("addr", ":8080", "http server address")
 
@@ -64,7 +56,7 @@ func AddInvoice(c *gin.Context) {
 
 	log.Fatal(http.ListenAndServe(*addr, nil))
 	*/
-	var invoice model.Invoice
+	/*var invoice model.Invoice
 
 	fmt.Println(c)
 
@@ -85,14 +77,14 @@ func AddInvoice(c *gin.Context) {
 
 	services.Db.Save(&invoice)
 
-	c.JSON(http.StatusCreated, gin.H{"status": http.StatusCreated, "message": "Create successful!", "resourceId": invoice.ID})
+	c.JSON(http.StatusCreated, gin.H{"status": http.StatusCreated, "message": "Create successful!", "resourceId": invoice.ID})*/
 }
 
 /**
  * Procura na lista de faturas se existe uma fatura com o id enviado por parâmetro e elinina-a da tabela de faturas
 **/
-func DeleteInvoice(c *gin.Context) {
-	var invoice model.Invoice
+func DeleteIdentityCardInfo(c *gin.Context) {
+	/*var invoice model.Invoice
 
 	id := c.Param("id")
 
@@ -105,5 +97,10 @@ func DeleteInvoice(c *gin.Context) {
 
 	services.Db.Delete(&invoice)
 
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})*/
+}
+
+
+func GetAllIdentityCardInfo(c *gin.Context){
+
 }

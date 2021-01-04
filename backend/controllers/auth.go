@@ -1,11 +1,11 @@
 package controllers
 
 import (
+	"IdentityCardReader/backend/model"
+	"IdentityCardReader/backend/services"
+
 	// Local imports
 	"regexp"
-
-	"github.com/JsBraz/ProjetoAppWeb/backend/model"
-	"github.com/JsBraz/ProjetoAppWeb/backend/services"
 
 	// Other imports
 	"net/http"
@@ -35,7 +35,7 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	defer services.Db.Close()
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": usr.Username, "token": token, "Role": usr.Role})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": usr.Username, "token": token})
 }
 
 func isEmailValid(e string) bool {
@@ -49,9 +49,6 @@ var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z
 
 func RegisterHandler(c *gin.Context) {
 	var creds model.Users
-	if creds.Role == "" {
-		creds.Role = "user"
-	}
 
 	if err := c.ShouldBindJSON(&creds); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
