@@ -41,7 +41,7 @@ func main() {
 		c.JSON(404, gin.H{"code": "PAGE_NOT_FOUND", "message": "Page not found"})
 	})
 
-	checkout := router.Group("/api")
+	checkout := router.Group("/api/users")
 	checkout.Use(services.AuthorizationRequired())
 	{
 		checkout.POST("/addIdentityCardInfo", routes.AddIdentityCardInfo)
@@ -50,7 +50,7 @@ func main() {
 		checkout.GET("/GetAllIdentityCardInfo", routes.GetAllIdentityCardInfo)
 	}
 
-	auth := router.Group("/api/auth")
+	auth := router.Group("/api")
 	{
 		// devolve admin=true(Admin) or admin=false(Staff)
 		auth.POST("/login", routes.GenerateToken)

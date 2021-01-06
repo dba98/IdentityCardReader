@@ -1,7 +1,16 @@
 FROM golang:1.13-alpine
 
+ENV GOPATH /go
+
+RUN sudo apt-get install nano
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh gcc libc-dev
+
+RUN apk add \
+  g++ \
+  git \
+  musl-dev \
+  tesseract-ocr-dev
 
 RUN go get -u github.com/jinzhu/gorm
 RUN go get -u github.com/gin-gonic/gin
@@ -15,6 +24,7 @@ RUN go get -u github.com/gin-contrib/cors
 RUN go get -u github.com/rs/cors/wrapper/gin
 RUN go get -u github.com/dgrijalva/jwt-go
 RUN go get -u github.com/stretchr/testify
+RUN go get -u github.com/otiai10/gosseract
 # HOT RELOAD
 RUN go get -u github.com/githubnemo/CompileDaemon
 

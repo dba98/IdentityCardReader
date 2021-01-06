@@ -11,29 +11,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IdentityCardReader.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/gosseract.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/NavBarUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/identityCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/loadingError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducers/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducers/identityCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducers/loadingError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducers/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/cardinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/cardinfo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/checkout.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/checkout.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/IdentityCard.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/IdentityCard.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/Users.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/Users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/Users_Locations.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/cardInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/cardInfo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/checkout.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/checkout.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/common.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/middlewares.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/middlewares.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/swagger.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/swagger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/gosseract.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/gosseract.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CardTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Go File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +70,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -66,7 +79,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,9 +87,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ts.external.directory.path" value="C:\Users\dgbor\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\202.7319.49\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbor\Projetos\IdentityCardReader\frontend" />
+      <recent name="C:\Users\dgbor\Projetos\IdentityCardReader\frontend\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dgbor\go\src\IdentityCardReader\backend" />
     </key>
@@ -90,11 +109,6 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build main.go" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,6 +120,7 @@
       <updated>1609618464814</updated>
       <workItem from="1609618466461" duration="3286000" />
       <workItem from="1609694852778" duration="4460000" />
+      <workItem from="1609885954614" duration="11098000" />
     </task>
     <servers />
   </component>
@@ -133,70 +148,65 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" width="816" height="730" key="#Intentions/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609714294671" />
-    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609717498096">
+    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609893520805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717498096" />
+    <state x="731" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609893520805" />
+    <state x="1146" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609889473706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1146" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609889473706" />
+    <state x="1186" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609895342897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1186" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609895342897" />
     <state width="602" height="635" key="DebuggerActiveHint" timestamp="1609717217669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="602" height="635" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717217669" />
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1609717449549">
+    <state width="979" height="280" key="GridCell.Tab.0.bottom" timestamp="1609897203191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
-    <state width="1877" height="340" key="GridCell.Tab.0.center" timestamp="1609717449549">
+    <state width="979" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609897203191" />
+    <state width="979" height="280" key="GridCell.Tab.0.center" timestamp="1609897203190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
-    <state width="1877" height="340" key="GridCell.Tab.0.left" timestamp="1609717449549">
+    <state width="979" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609897203190" />
+    <state width="979" height="280" key="GridCell.Tab.0.left" timestamp="1609897203189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
-    <state width="1877" height="340" key="GridCell.Tab.0.right" timestamp="1609717449549">
+    <state width="979" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609897203189" />
+    <state width="979" height="280" key="GridCell.Tab.0.right" timestamp="1609897203190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717449549" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1609717450023">
+    <state width="979" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609897203190" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1609724290873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450022" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1609717450021">
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609724290873" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1609724290872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450021" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1609717450021">
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609724290872" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1609724290872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450021" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1609717450022">
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609724290872" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1609724290872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609717450022" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609724290872" />
     <state x="785" y="279" key="refactoring.ChangeSignatureDialog" timestamp="1609714475831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="785" y="279" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609714475831" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/main.go</url>
-          <line>16</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/main.go</url>
-          <line>25</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go</url>
-          <line>68</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="1095" y="242" key="run.anything.popup" timestamp="1609895491101">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1095" y="242" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609895491101" />
+    <state x="1103" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609895372428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1609895372428" />
   </component>
 </project>
