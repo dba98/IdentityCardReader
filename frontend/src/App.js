@@ -18,8 +18,8 @@ const App = props => {
             <Route path="/home" component={Home}/>
             <Route path="/signup" component={SignUp}/>
             <Route path="/logout" component={Logout}/>
-            <Route path="/" component={Login}/>
             <Route path="/profile" component={Profile}/>
+            <Route path="/login" component={Login}/>
             <Route render={() => <h1>Not found!</h1>}/>
             <Redirect to="/"/>
         </Switch>
