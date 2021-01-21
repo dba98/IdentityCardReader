@@ -2,16 +2,13 @@ package controllers
 
 import (
 	"IdentityCardReader/backend/model"
+	"IdentityCardReader/backend/services"
 	"net/http"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
 
-/**
- * Procura na lista de faturas do utilizador se existe uma fatura com o id enviado por parâmetro
- * nos parâmetros tem que contar o ID do user e o ID da fatura
-**/
+
 func GetIdentityCardInfo(c *gin.Context) {
 
 	var identityCard model.IdentityCard
@@ -20,22 +17,19 @@ func GetIdentityCardInfo(c *gin.Context) {
 
 	if err := c.ShouldBindJSON(&creds); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
-		
+	}
 	services.Db.Find(&identityCard, "identityCardID = ?", creds.ID)
-	
+
 	if identityCard.Nif == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Invalid IdentityCard!"})
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": creds.nif})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": creds.Nif})
 	return
 }
 
-/**
-* Adiciona à tabela das faturas uma nova fatura com todos os parâmetros da mesma
-**/
-func AddIdentityCardInfo(c *gin.Context) {
+func AddIdentityCardInfo(c *gin.Context){
 	var identityCard model.IdentityCard
 
 	if err := c.ShouldBindJSON(&identityCard); err != nil {
@@ -51,13 +45,10 @@ func AddIdentityCardInfo(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "ID": identityCard.ID, "identityCard": identityCard})
-	
+
 
 }
 
-/**
- * Procura na lista de faturas se existe uma fatura com o id enviado por parâmetro e elinina-a da tabela de faturas
-**/
 func DeleteIdentityCardInfo(c *gin.Context) {
 	var identityCard model.IdentityCard
 
@@ -80,7 +71,7 @@ func GetAllIdentityCardInfo(c *gin.Context) {
 
 	services.Db.Find(&identityCards)
 
-	if len(users) <= 0 {
+	if len(identityCards) <= 0 {
 		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})
 		return
 	}
