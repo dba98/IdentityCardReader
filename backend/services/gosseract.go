@@ -17,5 +17,4 @@ func CardImageDecrypt() {
 	if err != nil {
 		fmt.Printf("Unable to write file: %v", err)
 	}
-	// Hello, World!
 }

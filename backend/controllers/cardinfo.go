@@ -1,6 +1,10 @@
 package controllers
 
 import (
+	"IdentityCardReader/backend/model"
+	"net/http"
+	"strconv"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,97 +14,76 @@ import (
 **/
 func GetIdentityCardInfo(c *gin.Context) {
 
-	/*IdentitycardinfoId, err := strconv.ParseUint(c.Param("invoiceID"), 10, 32)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Invalid Invoice ID!"})
+	var identityCard model.IdentityCard
+	var creds model.IdentityCard
+
+
+	if err := c.ShouldBindJSON(&creds); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
+		
+	services.Db.Find(&identityCard, "identityCardID = ?", creds.ID)
+	
+	if identityCard.Nif == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Invalid IdentityCard!"})
 		return
 	}
 
-	uintID := uint(IdentitycardinfoId)
-
-	// Vai buscar a lista de invoices e verifica se é nula ou não
-
-	var listInvoices = GetAll(c)
-
-	if listInvoices == nil {
-		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Lista de faturas vazia!"})
-		return
-	}
-
-	// Procura se o ID da fatura existe na lista de faturas do utiliador
-	for _, invoice := range listInvoices {
-
-		if invoice.ID == uintID {
-			c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "data": invoice})
-			return
-		}
-	}
-
-	c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Não existe na sua lista de faturas!"})
-	return*/
-
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": creds.nif})
+	return
 }
 
 /**
 * Adiciona à tabela das faturas uma nova fatura com todos os parâmetros da mesma
 **/
 func AddIdentityCardInfo(c *gin.Context) {
+	var identityCard model.IdentityCard
 
-	/*var addr = flag.String("addr", ":8080", "http server address")
-
-	flag.Parse()
-
-	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		ServeWs(w, r)
-	})
-
-	log.Fatal(http.ListenAndServe(*addr, nil))
-	*/
-	/*var invoice model.Invoice
-
-	fmt.Println(c)
-
-	if err := c.ShouldBindJSON(&invoice); err != nil {
-		fmt.Println(err)
-		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Check syntax!"})
+	if err := c.ShouldBindJSON(&identityCard); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 		return
 	}
 
-	text, err := services.ProcessImage(invoice.Image)
-
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Cannot process image!"})
+	value := services.Db.Save(&identityCard)
+	if value.RowsAffected == 0 {
+		c.JSON(http.StatusConflict, gin.H{"status": http.StatusConflict, "message": "nif already taken!"})
+		defer services.Db.Close()
 		return
 	}
 
-	invoice.Info = text
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "ID": identityCard.ID, "identityCard": identityCard})
+	
 
-	services.Db.Save(&invoice)
-
-	c.JSON(http.StatusCreated, gin.H{"status": http.StatusCreated, "message": "Create successful!", "resourceId": invoice.ID})*/
 }
 
 /**
  * Procura na lista de faturas se existe uma fatura com o id enviado por parâmetro e elinina-a da tabela de faturas
 **/
 func DeleteIdentityCardInfo(c *gin.Context) {
-	/*var invoice model.Invoice
+	var identityCard model.IdentityCard
 
 	id := c.Param("id")
+	services.Db.First(&identityCard, id)
 
-	services.Db.Where("id = ?", id).Find(&invoice, id)
-
-	if invoice.ID == 0 {
+	if identityCard.ID == 0 {
 		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})
 		return
 	}
 
-	services.Db.Delete(&invoice)
-
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})*/
+	services.Db.Delete(&identityCard)
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})
 }
 
 
-func GetAllIdentityCardInfo(c *gin.Context){
 
+func GetAllIdentityCardInfo(c *gin.Context) {
+	var identityCards []model.IdentityCard
+
+	services.Db.Find(&identityCards)
+
+	if len(users) <= 0 {
+		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "data": identityCards})
 }
