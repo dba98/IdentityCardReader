@@ -10,44 +10,11 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { useStyles } from './Styles';
-import { withStyles } from '@material-ui/core/styles';
-import { borders } from '@material-ui/system';
-
-const CssTextField = withStyles({
-  root: {
-    '& label.Mui-focused': {
-      color: 'white',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'yellow',
-    },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
-      },
-      '&:hover fieldset': {
-        borderColor: 'white',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'yellow',
-      },
-    },
-  },
-})(TextField);
 
 const Login = props => {
 
-
     // styles
-   
-    const classes = {
-        root: {
-          background: "black"
-        },
-        input: {
-          color: "white"
-        }
-      };
+    const classes = useStyles();
 
     // state
     const [username, setUsername] = useState('');
@@ -70,24 +37,19 @@ const Login = props => {
     let isAuth = props.token ? <Redirect to='/home' /> : null;
 
     return (
-        <Container maxWidth="sm"  >
+        <Container maxWidth="sm" >
             <Grid>
-                <Box border={1} borderRadius={"borderRadius"} borderColor="pink" boxShadow={3} style={{ padding: '75px' }}>
+                <Box boxShadow={3} style={{ padding: '50px' }}>
                     {isAuth}
                     <form onSubmit={onSubmitHandler} className={classes.authTextFileds} noValidate autoComplete="off">
-                        <h1>Login</h1>
+                        <h2>Login</h2>
                         <div>
-                            <TextField required id="standard-basic" label="Username" variant="outlined"  size="small" color="secondary"
-                                InputProps={{
-                                    classes: {
-                                      className: classes.input
-                                    }
-                                  }} onChange={event => {
-                                setUsername(event.target.value); 
+                            <TextField required id="standard-basic" label="Username" onChange={event => {
+                                setUsername(event.target.value);
                             }} />
                         </div>
                         <div>
-                            <TextField required id="standard-password-input" label="Password" variant="outlined" size ="small" color= "secondary"type="password" onChange={event => {
+                            <TextField required id="standard-password-input" label="Password" type="password" onChange={event => {
                                 setPassword(event.target.value);
                             }} />
                         </div>
