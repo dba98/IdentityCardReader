@@ -2,9 +2,10 @@ package model
 
 import "github.com/jinzhu/gorm"
 
-type Users struct {
+type User struct {
 	gorm.Model `swaggerignore:"true"`
 	Username   string `gorm:"unique;not null" json:"username"`
 	Password   string `gorm:"not null" json:"password"`
-	Nif       string `gorm:"unique,not null" json:"role"`
+	Role       string `gorm:"not null" json:"role"`
+	Nif        string `gorm:"not null" json:"nif"`
 }

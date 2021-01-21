@@ -6,10 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-/**
- * Cada rota vai buscar a respetiva função à package dos controladores
-**/
-
 func AddIdentityCardInfo(c *gin.Context) {
 	controllers.AddIdentityCardInfo(c)
 }
