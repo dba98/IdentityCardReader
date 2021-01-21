@@ -2,7 +2,7 @@ FROM golang:1.13-alpine
 
 ENV GOPATH /go
 
-RUN sudo apt-get install nano
+
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh gcc libc-dev
 

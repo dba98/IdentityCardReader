@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
+        alignSelf: 'center',
+        color: 'white'
     },
 }));
 
@@ -54,10 +56,7 @@ const NavbarUI = props => {
         <div className={classes.root}>
         <AppBar position="static">
             <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
-                </IconButton>
-                <Button color="inherit" className={classes.title} onClick={onIdentityCardsButtonClick}>IdentityCards</Button>
+                <Button color="black" className={classes.title} onClick={onIdentityCardsButtonClick}>IdentityCards</Button>
                <Button color="inherit" className={classes.menuButton} onClick={onProfileButtonClick}>Profile</Button>
             </Toolbar>
         </AppBar>

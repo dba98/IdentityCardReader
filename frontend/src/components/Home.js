@@ -14,7 +14,7 @@ const Home = props => {
         <Container maxWidth="sm" >
             {isAuth}
             <Grid>
-                <Box boxShadow={3} style={{ padding: '50px' }}>
+                <Box justifyContent="center" boxShadow={3} style={{ padding: '50px' }}>
                     <div>
                         <h2>Homepage</h2>
                     </div>
