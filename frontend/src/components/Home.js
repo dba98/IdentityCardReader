@@ -8,7 +8,7 @@ import Container from '@material-ui/core/Container';
 
 const Home = props => {
 
-    let isAuth = !props.token ? <Redirect to='/' /> : null;
+    let isAuth = !props.token ? <Redirect to='/home' /> : null;
 
     return (
         <Container maxWidth="sm" >

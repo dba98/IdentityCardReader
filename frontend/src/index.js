@@ -12,6 +12,8 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 
+
+
 const rootReducer = combineReducers({
     identityCards: identityCards,
     loadingError: loadingError,

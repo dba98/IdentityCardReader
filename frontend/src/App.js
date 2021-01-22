@@ -3,12 +3,15 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Logout from "./components/Logout";
+import IdentityCard from "./components/IdentityCards/IdentityCard"
 import React from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 import Layout from './components/Layout';
 import {connect} from 'react-redux';
+
+
 
 
 const App = props => {
@@ -20,6 +23,7 @@ const App = props => {
             <Route path="/logout" component={Logout}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/login" component={Login}/>
+            <Route path="/identitycards" component={IdentityCard}/>
             <Route render={() => <h1>Not found!</h1>}/>
         </Switch>
     );
@@ -44,5 +48,7 @@ const mapStateToProps = (state) => {
         token: state.auth.token,
     };
 }
+
+
 
 export default connect(mapStateToProps, null)(App);
