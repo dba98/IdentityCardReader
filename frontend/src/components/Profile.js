@@ -53,4 +53,21 @@ const Profile = props => {
     );
 }
 
+
+// get state from reducer
+const mapStateToProps = (state) => {
+    return {
+        token: state.auth.token,
+        loading: state.loadingError.loading,
+        error: state.loadingError.error,
+    };
+}
+
+// actions to reducer (dispatch)
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    };
+}
+
 export default Profile;
