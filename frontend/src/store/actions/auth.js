@@ -21,7 +21,7 @@ export const logout = () => {
     };
 }
 
-export const auth = (username, password) => {
+export const  auth = (username, password) => {
     return dispatch => {
         const authData = {
             username: username,
@@ -29,7 +29,11 @@ export const auth = (username, password) => {
         };
 
         axios.post(api.URL_LOGIN, authData).then(res => {
+
+
             dispatch(loadingErrorActions.startRequest());
+            console.log(username + "AUTHDATA USERNAME")
+            console.log(res.data.username + "RESPONSE USERNAME")
 
             const expirationDate = new Date(Date.parse(res.data.expirationTime));
             // 60000 -> 1min to refresh token before it expires

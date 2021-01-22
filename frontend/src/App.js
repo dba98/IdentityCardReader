@@ -21,7 +21,6 @@ const App = props => {
             <Route path="/profile" component={Profile}/>
             <Route path="/login" component={Login}/>
             <Route render={() => <h1>Not found!</h1>}/>
-            <Redirect to="/"/>
         </Switch>
     );
 

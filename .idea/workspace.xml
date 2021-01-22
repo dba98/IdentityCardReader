@@ -11,13 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/IdentityCards/IdentityCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proxy/conf.d/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Proxy/conf.d/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/Claims.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/Claims.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/jwt.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBarUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NavBarUI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +36,7 @@
       <list>
         <option value="Go File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -52,6 +60,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,12 +73,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbor\go\src\IdentityCardReader\backend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dgbor\Projetos\IdentityCardReader\frontend" />
       <recent name="C:\Users\dgbor\Projetos\IdentityCardReader\frontend\src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbor\go\src\IdentityCardReader\backend" />
     </key>
   </component>
   <component name="RunManager">
@@ -94,6 +103,7 @@
       <workItem from="1609694852778" duration="4460000" />
       <workItem from="1609885954614" duration="11098000" />
       <workItem from="1610057667060" duration="3752000" />
+      <workItem from="1611270388668" duration="3686000" />
     </task>
     <servers />
   </component>

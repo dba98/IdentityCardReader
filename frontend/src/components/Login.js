@@ -14,7 +14,14 @@ import { useStyles } from './Styles';
 const Login = props => {
 
     // styles
-    const classes = useStyles();
+    const classes = {
+        root: {
+            background: "black"
+        },
+        input: {
+            color: "white"
+        }
+    };
 
     // state
     const [username, setUsername] = useState('');
@@ -39,17 +46,22 @@ const Login = props => {
     return (
         <Container maxWidth="sm" >
             <Grid>
-                <Box boxShadow={3} style={{ padding: '50px' }}>
+                <Box border={1} borderRadius={"borderRadius"} borderColor="pink" boxShadow={3} style={{ padding: '75px' }}>
                     {isAuth}
                     <form onSubmit={onSubmitHandler} className={classes.authTextFileds} noValidate autoComplete="off">
-                        <h2>Login</h2>
+                        <h1>Login</h1>
                         <div>
-                            <TextField required id="standard-basic" label="Username" onChange={event => {
+                            <TextField required id="standard-basic" label="Username" variant="outlined"  size="small" color="secondary"
+                                       InputProps={{
+                                           classes: {
+                                               className: classes.input
+                                           }
+                                       }} onChange={event => {
                                 setUsername(event.target.value);
                             }} />
                         </div>
                         <div>
-                            <TextField required id="standard-password-input" label="Password" type="password" onChange={event => {
+                            <TextField required id="standard-password-input" label="Password" variant="outlined" size ="small" color= "secondary"type="password" onChange={event => {
                                 setPassword(event.target.value);
                             }} />
                         </div>

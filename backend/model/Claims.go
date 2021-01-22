@@ -8,5 +8,6 @@ import (
 // We add jwt.StandardClaims as an embedded type, to provide fields like expiry time
 type Claims struct {
 	Username           string `json:"username"`
+	IsAdmin            bool   `json:"isAdmin"`
 	jwt.StandardClaims `swaggerignore:"true"`
 }

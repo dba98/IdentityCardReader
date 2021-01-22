@@ -27,7 +27,7 @@ func GetSecretKey() []byte {
 	return []byte(secretKey)
 }
 
-func GenerateTokenJWT(credentials model.User) string {
+func GenerateTokenJWT(credentials model.User) (string, time.Time, bool) {
 	// Set expiration time of the token
 	expirationTime := time.Now().Add(15 * time.Minute)
 
@@ -45,9 +45,9 @@ func GenerateTokenJWT(credentials model.User) string {
 	tokenString, err := token.SignedString(JwtKey)
 
 	if err != nil {
-		return ""
+		return "",time.Now(), false
 	}
-	return tokenString
+	return tokenString, expirationTime, claims.IsAdmin
 }
 
 func ValidateTokenJWT(c *gin.Context) bool {

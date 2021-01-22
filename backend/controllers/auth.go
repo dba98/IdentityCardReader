@@ -3,6 +3,7 @@ package controllers
 import (
 	"IdentityCardReader/backend/model"
 	"IdentityCardReader/backend/services"
+	"fmt"
 
 	// Local imports
 	"regexp"
@@ -28,14 +29,15 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 
-	token := services.GenerateTokenJWT(creds)
+	token, expirationTime ,isAdmin := services.GenerateTokenJWT(usr)
 
 	if token == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Access denied!"})
 		return
 	}
 	defer services.Db.Close()
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": usr.Username, "token": token})
+	fmt.Println(usr.Username +" teste")
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "username": usr.Username, "token": token,"expirationTime": expirationTime,"isAdmin": isAdmin})
 }
 
 func isEmailValid(e string) bool {
@@ -78,7 +80,7 @@ func RefreshHandler(c *gin.Context) {
 		Username: c.GetHeader("username"),
 	}
 
-	token := services.GenerateTokenJWT(user)
+	token, expirationTime,isAdmin := services.GenerateTokenJWT(user)
 
 	if token == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Acesso não autorizado"})
@@ -86,5 +88,5 @@ func RefreshHandler(c *gin.Context) {
 	}
 
 	defer services.Db.Close()
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusNoContent, "message": "Token atualizado com sucesso!", "token": token})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusNoContent, "message": "Token atualizado com sucesso!", "token": token,"expirationTime": expirationTime,"isAdmin": isAdmin})
 }
