@@ -8,16 +8,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
 func GetIdentityCardInfo(c *gin.Context) {
 
 	var identityCard model.IdentityCard
 	var creds model.IdentityCard
 
-
 	if err := c.ShouldBindJSON(&creds); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 	}
+
 	services.Db.Find(&identityCard, "identityCardID = ?", creds.ID)
 
 	if identityCard.Nif == "" {
@@ -29,13 +28,15 @@ func GetIdentityCardInfo(c *gin.Context) {
 	return
 }
 
-func AddIdentityCardInfo(c *gin.Context){
+func AddIdentityCardInfo(c *gin.Context) {
 	var identityCard model.IdentityCard
 
 	if err := c.ShouldBindJSON(&identityCard); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 		return
 	}
+	identityCard.Image1 = services.CardImageDecrypt(identityCard.Image1)
+	identityCard.Image2 = services.CardImageDecrypt(identityCard.Image2)
 
 	value := services.Db.Save(&identityCard)
 	if value.RowsAffected == 0 {
@@ -45,7 +46,6 @@ func AddIdentityCardInfo(c *gin.Context){
 	}
 
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "ID": identityCard.ID, "identityCard": identityCard})
-
 
 }
 
@@ -63,8 +63,6 @@ func DeleteIdentityCardInfo(c *gin.Context) {
 	services.Db.Delete(&identityCard)
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})
 }
-
-
 
 func GetAllIdentityCardInfo(c *gin.Context) {
 	var identityCards []model.IdentityCard

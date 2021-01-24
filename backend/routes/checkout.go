@@ -14,7 +14,7 @@ import (
 // @Security BearerAuth
 // @param Authorization header string true "Token"
 // @Router /checkout [get]
-// @Success 200 {array} model.Users
+// @Success 200 {array} model.User
 // @Failure 404 "Not found"
 func GetAllUsers(c *gin.Context) {
 	controllers.GetAllUsers(c)

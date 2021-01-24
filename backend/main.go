@@ -15,14 +15,14 @@ var identityKey = "id"
 
 func init() {
 	services.OpenDatabase()
+	services.Db.DropTableIfExists(&model.IdentityCard{})
 	services.Db.AutoMigrate(&model.User{})
+	services.Db.AutoMigrate(&model.IdentityCard{})
 
 	defer services.Db.Close()
 }
 
 func main() {
-
-	services.CardImageDecrypt()
 
 	services.FormatSwagger()
 

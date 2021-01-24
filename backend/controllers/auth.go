@@ -29,15 +29,15 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 
-	token, expirationTime ,isAdmin := services.GenerateTokenJWT(usr)
+	token, expirationTime, isAdmin := services.GenerateTokenJWT(usr)
 
 	if token == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Access denied!"})
 		return
 	}
 	defer services.Db.Close()
-	fmt.Println(usr.Username +" teste")
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "username": usr.Username, "token": token,"expirationTime": expirationTime,"isAdmin": isAdmin})
+	fmt.Println(usr.Username + " teste")
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "id": usr.ID, "username": usr.Username, "token": token, "expirationTime": expirationTime, "isAdmin": isAdmin, "nif": usr.Nif})
 }
 
 func isEmailValid(e string) bool {
@@ -69,7 +69,6 @@ func RegisterHandler(c *gin.Context) {
 		defer services.Db.Close()
 		return
 	}
-
 	defer services.Db.Close()
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "ID": creds.ID, "user": creds})
 }
@@ -80,7 +79,7 @@ func RefreshHandler(c *gin.Context) {
 		Username: c.GetHeader("username"),
 	}
 
-	token, expirationTime,isAdmin := services.GenerateTokenJWT(user)
+	token, expirationTime, isAdmin := services.GenerateTokenJWT(user)
 
 	if token == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Acesso não autorizado"})
@@ -88,5 +87,5 @@ func RefreshHandler(c *gin.Context) {
 	}
 
 	defer services.Db.Close()
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusNoContent, "message": "Token atualizado com sucesso!", "token": token,"expirationTime": expirationTime,"isAdmin": isAdmin})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusNoContent, "message": "Token atualizado com sucesso!", "token": token, "expirationTime": expirationTime, "isAdmin": isAdmin})
 }
