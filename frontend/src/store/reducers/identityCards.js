@@ -12,7 +12,6 @@ const reducer = (state = initialState, action) => {
             console.log(action)
             let newArrayPlacesList = state.places.filter((place) => (place.ID !== action.id));
             let placeList = state.places.find(place => place.ID === action.id);
-
             placeList = { ...placeList, users: action.users };
             newArrayPlacesList = newArrayPlacesList.concat(placeList);
             

@@ -1,62 +1,32 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
+import GridList from "@material-ui/core/GridList";
+
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card'; 
-import Typography from '@material-ui/core/Typography';
+import { useStyles } from '../Styles';
+import * as actions from '../../store/actions/index';
+import jwt_decode from 'jwt-decode';
 
-const useStyles = makeStyles({
-    root: {
-      minWidth: 275,
-      maxWidth: 300,
-    },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
-    },
-    title: {
-      fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
-    },
-  });
-
-
-
-const IdentityCard = () =>{
-    const classes = useStyles();
-    const cardInfo = [
-        {title: "joao maneta", text: "funciona pls", text2 :"bruto"},
-        {title: "anacleto mongo", text: "era fixe se funcionasses", text2 :"grande e grosso"},
-        {title: "rudoflo estroncio", text: "deixa me passar á cadeira", text2 :"manooobro"},
-    ];
-
-    const renderCard = (card,index) => {
-        return(
-            <Card className={classes.root} variant="outlined" key={index}>
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
-                {card.title}
-              </Typography>
-              <Typography className={classes.text} color="textSecondary">
-                  {card.text}
-              </Typography>
-              <Typography variant="body2" component="p">
-              {card.text2}
-              </Typography>
-            </CardContent>
-          </Card>
-        )
-    }
-    return <div className="grid">
-        {cardInfo.map(renderCard)}
-        </div>
+const IdentityCard = (props) => {
+  const { cards } = props;
+ const  data= Array.from(props.cards)
+  if (!cards || cards.length === 0) return <p>No cards, sorry</p>;
+  return (
+    <ul>
+      <h2 className='list-head'>Available Identity cards</h2>
+      {data.map((card) => {
+        return (
+          <li key={card.nif} className='list'>
+            <span className='repo-text'>{card.frontdata} </span>
+            <span className='repo-description'>{card.backdata}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
-
-
-export default IdentityCard;
-
-
+export default IdentityCard; 

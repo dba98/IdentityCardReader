@@ -39,10 +39,13 @@ export const  auth = (username, password) => {
             // 60000 -> 1min to refresh token before it expires
             const expirationTime = Date.parse(res.data.expirationTime) - new Date().getTime() - 60000;
 
+
+            localStorage.setItem('id',res.data.id)
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('expirationDate', expirationDate);
             localStorage.setItem('expirationTime', expirationTime);
             localStorage.setItem('username', res.data.username);
+            localStorage.setItem('nif',res.data.nif)
 
             //dispatch(checkAuthTimeout(expirationTime));
             dispatch(authSuccess(res.data.token, res.data.username));
