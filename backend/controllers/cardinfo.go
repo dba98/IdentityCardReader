@@ -3,6 +3,7 @@ package controllers
 import (
 	"IdentityCardReader/backend/model"
 	"IdentityCardReader/backend/services"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,20 +12,23 @@ import (
 func GetIdentityCardInfo(c *gin.Context) {
 
 	var identityCard model.IdentityCard
-	var creds model.IdentityCard
+	var nif string
 
-	if err := c.ShouldBindJSON(&creds); err != nil {
+	if err := c.ShouldBindJSON(&identityCard); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 	}
+	//fmt.Println(c.Keys("nif"))
+	fmt.Println(c.Keys)
+	fmt.Println(nif)
+	services.Db.Find(&identityCard, "nif = ?", identityCard.Nif)
 
-	services.Db.Find(&identityCard, "identityCardID = ?", creds.ID)
-
+	fmt.Println(identityCard)
 	if identityCard.Nif == "" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Invalid IdentityCard!"})
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "Username": creds.Nif})
+	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "id": identityCard.ID, "nif": identityCard.Nif, "frontData": identityCard.Image1, "backData": identityCard.Image2})
 	return
 }
 

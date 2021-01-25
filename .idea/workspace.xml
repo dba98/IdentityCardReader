@@ -12,19 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proxy/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Proxy/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/cardinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/cardinfo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/imageText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/imageText.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/IdentityCard.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/IdentityCard.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/checkout.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/checkout.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/gosseract.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/gosseract.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintcache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +95,7 @@
       <workItem from="1609885954614" duration="11098000" />
       <workItem from="1610057667060" duration="3752000" />
       <workItem from="1611270388668" duration="4071000" />
-      <workItem from="1611492816599" duration="18967000" />
+      <workItem from="1611492816599" duration="26954000" />
     </task>
     <servers />
   </component>

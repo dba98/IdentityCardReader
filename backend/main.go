@@ -15,7 +15,7 @@ var identityKey = "id"
 
 func init() {
 	services.OpenDatabase()
-	services.Db.DropTableIfExists(&model.IdentityCard{})
+	//services.Db.DropTableIfExists(&model.IdentityCard{})
 	services.Db.AutoMigrate(&model.User{})
 	services.Db.AutoMigrate(&model.IdentityCard{})
 
@@ -44,9 +44,9 @@ func main() {
 	checkout.Use(services.AuthorizationRequired())
 	{
 		checkout.POST("/addIdentityCardInfo", routes.AddIdentityCardInfo)
-		checkout.DELETE("/DeleteIdentityCardInfo/:id", routes.DeleteIdentityCardInfo)
-		checkout.GET("/GetIdentityCardInfo/:id", routes.GetIdentityCardInfo)
-		checkout.GET("/GetAllIdentityCardInfo", routes.GetAllIdentityCardInfo)
+		checkout.DELETE("/deleteIdentityCardInfo/:id", routes.DeleteIdentityCardInfo)
+		checkout.POST("/getIdentityCardInfo", routes.GetIdentityCardInfo)
+		checkout.GET("/getAllIdentityCardInfo", routes.GetAllIdentityCardInfo)
 	}
 
 	auth := router.Group("/api")
