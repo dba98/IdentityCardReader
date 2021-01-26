@@ -28,7 +28,7 @@ export const fetchAllUsers = (token) => {
     }
 }
 */
-const createNewUser = (username, id) => {
+const createNewUser = (username, id,nif) => {
     return {
         type: actionTypes.CREATE_USER,
         username: username,

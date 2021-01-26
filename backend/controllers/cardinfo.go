@@ -56,13 +56,13 @@ func AddIdentityCardInfo(c *gin.Context) {
 func DeleteIdentityCardInfo(c *gin.Context) {
 	var identityCard model.IdentityCard
 
-	nif := c.Param("id")
-	services.Db.First(&identityCard, nif)
-
-	if identityCard.Nif == "0"  {
-		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})
+	if err := c.ShouldBindJSON(&identityCard); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
+		fmt.Println(identityCard)
 		return
 	}
+	fmt.Println(identityCard)
+	services.Db.Find(&identityCard, "nif = ?", identityCard.Nif)
 
 	services.Db.Delete(&identityCard)
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Delete succeeded!"})

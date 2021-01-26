@@ -44,7 +44,7 @@ func main() {
 	checkout.Use(services.AuthorizationRequired())
 	{
 		checkout.POST("/addIdentityCardInfo", routes.AddIdentityCardInfo)
-		checkout.DELETE("/deleteIdentityCardInfo/:id", routes.DeleteIdentityCardInfo)
+		checkout.DELETE("/deleteIdentityCardInfo", routes.DeleteIdentityCardInfo)
 		checkout.POST("/getIdentityCardInfo", routes.GetIdentityCardInfo)
 		checkout.GET("/getAllIdentityCardInfo", routes.GetAllIdentityCardInfo)
 	}

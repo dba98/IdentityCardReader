@@ -82,13 +82,20 @@ const useStyles = makeStyles({
     
   }
 
+
     handleRemove(id) {
+      const params={
+        nif:id,
+        image1: '',
+        image2: ''
+      }
     axios({
       method:'DELETE',
-      url: 'http://localhost:8082/api/users/deleteIdentityCardInfo/'+id,
+      url: 'http://localhost:8082/api/users/deleteIdentityCardInfo',
       headers:{
         'Authorization': 'Bearer' + localStorage.getItem('token')
-      }
+      },
+      data: JSON.stringify(params)
     })
     const cards = this.state.cards
     var posicao = -1;

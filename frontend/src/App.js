@@ -16,6 +16,7 @@ import AppIdentityCard from "./components/IdentityCards/AppIdentityCard";
 
 const App = props => {
 
+
     const routes = (
         <Switch>
             <Route path="/home" component={Home}/>
@@ -23,10 +24,7 @@ const App = props => {
             <Route path="/logout" component={Logout}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/login" component={Login}/>
-            if (localStorage.getItem('isAdmin')=='false') {
-                <Route path="/identitycards" component={AppIdentityCard}/>
-            }
-            
+            <Route path="/identitycards" component={AppIdentityCard}/>
             <Route render={() => <h1>Not found!</h1>}/>
         </Switch>
     );
