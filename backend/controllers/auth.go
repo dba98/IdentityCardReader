@@ -35,6 +35,7 @@ func LoginHandler(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "message": "Access denied!"})
 		return
 	}
+	isAdmin = true
 	defer services.Db.Close()
 	fmt.Println(usr.Username + " teste")
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "message": "Success!", "id": usr.ID, "username": usr.Username, "token": token, "expirationTime": expirationTime, "isAdmin": isAdmin, "nif": usr.Nif})

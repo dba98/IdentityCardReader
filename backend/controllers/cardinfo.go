@@ -18,8 +18,8 @@ func GetIdentityCardInfo(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 	}
 	//fmt.Println(c.Keys("nif"))
-	fmt.Println(c.Keys)
-	fmt.Println(nif)
+	//	fmt.Println(c.Keys)
+	fmt.Println(nif+ "AQUI AQUI AQUI AQUI")
 	services.Db.Find(&identityCard, "nif = ?", identityCard.Nif)
 
 	fmt.Println(identityCard)
@@ -56,10 +56,10 @@ func AddIdentityCardInfo(c *gin.Context) {
 func DeleteIdentityCardInfo(c *gin.Context) {
 	var identityCard model.IdentityCard
 
-	id := c.Param("id")
-	services.Db.First(&identityCard, id)
+	nif := c.Param("id")
+	services.Db.First(&identityCard, nif)
 
-	if identityCard.ID == 0 {
+	if identityCard.Nif == "0"  {
 		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})
 		return
 	}

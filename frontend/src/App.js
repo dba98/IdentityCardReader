@@ -9,7 +9,7 @@ import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import {connect} from 'react-redux';
-import AppIdentityCard from "./components/IdentityCards/appIdentityCard";
+import AppIdentityCard from "./components/IdentityCards/AppIdentityCard";
 
 
 
@@ -23,7 +23,10 @@ const App = props => {
             <Route path="/logout" component={Logout}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/login" component={Login}/>
-            <Route path="/identitycards" component={AppIdentityCard}/>
+            if (localStorage.getItem('isAdmin')=='false') {
+                <Route path="/identitycards" component={AppIdentityCard}/>
+            }
+            
             <Route render={() => <h1>Not found!</h1>}/>
         </Switch>
     );

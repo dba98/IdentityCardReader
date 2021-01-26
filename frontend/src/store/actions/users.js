@@ -33,6 +33,7 @@ const createNewUser = (username, id) => {
         type: actionTypes.CREATE_USER,
         username: username,
         id: id,
+        nif: nif,
     }
 }
 

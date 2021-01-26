@@ -34,6 +34,7 @@ export const  auth = (username, password) => {
             dispatch(loadingErrorActions.startRequest());
             console.log(username + "AUTHDATA USERNAME")
             console.log(res.data.username + "RESPONSE USERNAME")
+            console.log(res.data.isAdmin + "AQUI AQUI AQUI")
 
             const expirationDate = new Date(Date.parse(res.data.expirationTime));
             // 60000 -> 1min to refresh token before it expires
@@ -46,6 +47,7 @@ export const  auth = (username, password) => {
             localStorage.setItem('expirationTime', expirationTime);
             localStorage.setItem('username', res.data.username);
             localStorage.setItem('nif',res.data.nif)
+            localStorage.setItem('isAdmin',res.data.isAdmin)
 
             //dispatch(checkAuthTimeout(expirationTime));
             dispatch(authSuccess(res.data.token, res.data.username));

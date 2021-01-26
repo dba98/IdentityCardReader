@@ -80,6 +80,7 @@ const Login = props => {
 const mapStateToProps = (state) => {
     return {
         token: state.auth.token,
+        isAdmin: state.auth.isAdmin,
         loading: state.loadingError.loading,
         error: state.loadingError.error,
     };

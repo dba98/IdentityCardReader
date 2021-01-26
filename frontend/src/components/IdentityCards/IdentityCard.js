@@ -13,16 +13,15 @@ import jwt_decode from 'jwt-decode';
 
 const IdentityCard = (props) => {
   const { cards } = props;
- const  data= Array.from(props.cards)
   if (!cards || cards.length === 0) return <p>No cards, sorry</p>;
   return (
     <ul>
-      <h2 className='list-head'>Available Identity cards</h2>
-      {data.map((card) => {
+      <h2 className='identityCard-head'>Available Identity cards</h2>
+      {cards.map((card) => {
         return (
-          <li key={card.nif} className='list'>
-            <span className='repo-text'>{card.frontdata} </span>
-            <span className='repo-description'>{card.backdata}</span>
+          <li key={card.nif} className='identityCard'>
+            <span className='card-frontdata'>{card.frontdata} </span>
+            <span className='card-backdata'>{card.backdata}</span>
           </li>
         );
       })}
