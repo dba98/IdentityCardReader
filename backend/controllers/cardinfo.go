@@ -19,7 +19,7 @@ func GetIdentityCardInfo(c *gin.Context) {
 	}
 	//fmt.Println(c.Keys("nif"))
 	//	fmt.Println(c.Keys)
-	fmt.Println(nif+ "AQUI AQUI AQUI AQUI")
+	fmt.Println(nif + "AQUI AQUI AQUI AQUI")
 	services.Db.Find(&identityCard, "nif = ?", identityCard.Nif)
 
 	fmt.Println(identityCard)
@@ -39,8 +39,8 @@ func AddIdentityCardInfo(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 		return
 	}
-	identityCard.Image1 = services.CardImageDecrypt(identityCard.Image1)
-	identityCard.Image2 = services.CardImageDecrypt(identityCard.Image2)
+	identityCard.Image1 = services.CardImageDecrypt(identityCard.Image1, &identityCard, false)
+	identityCard.Image2 = services.CardImageDecrypt(identityCard.Image2, &identityCard, true)
 
 	value := services.Db.Save(&identityCard)
 	if value.RowsAffected == 0 {

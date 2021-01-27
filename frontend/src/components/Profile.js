@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router';
 
@@ -14,23 +14,21 @@ import {withStyles} from '@material-ui/core/styles';
 import {borders} from '@material-ui/system';
 
 
-
 export const isAuth = () => {
-        return localStorage.getItem('username');
+    return localStorage.getItem('username');
 }
 
 export const isAuthToken = () => {
-
-    if (localStorage.getItem('token')) {
-        return localStorage.getItem('token');
-    } else {
-        return false;
-    }
+    let token = localStorage.getItem('token');
+    console.log(token + "token")
+    return token;
 }
-const userName = isAuth();
-const token = isAuthToken();
-const Profile = props => {
 
+
+
+const Profile = props => {
+    const userName = isAuth();
+    const token = isAuthToken();
     return (
         <Container maxWidth="sm">
             <Grid>
@@ -38,14 +36,14 @@ const Profile = props => {
                      style={{padding: '75px'}}>
                     <h1>Your profile</h1>
                     <table>
-                    <tr>
-                        <td>userName :</td>
-                        <td >{userName}</td>
-                    </tr>
-                    <tr>
-                        <td>token :</td>
-                        <td>{token}</td>  
-                    </tr>
+                        <tr>
+                            <td>userName :</td>
+                            <td>{userName}</td>
+                        </tr>
+                        <tr>
+                            <td>token :</td>
+                            <td>{token}</td>
+                        </tr>
                     </table>
                 </Box>
             </Grid>
@@ -65,9 +63,7 @@ const mapStateToProps = (state) => {
 
 // actions to reducer (dispatch)
 const mapDispatchToProps = (dispatch) => {
-    return {
-
-    };
+    return {};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);

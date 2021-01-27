@@ -45,7 +45,7 @@ func GenerateTokenJWT(credentials model.User) (string, time.Time, bool) {
 	tokenString, err := token.SignedString(JwtKey)
 
 	if err != nil {
-		return "",time.Now(), false
+		return "", time.Now(), false
 	}
 	return tokenString, expirationTime, claims.IsAdmin
 }

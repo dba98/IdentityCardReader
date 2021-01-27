@@ -86,8 +86,8 @@ const useStyles = makeStyles({
     handleRemove(id) {
       const params={
         nif:id,
-        image1: '',
-        image2: ''
+        frontData: '',
+        backData: ''
       }
     axios({
       method:'DELETE',
@@ -131,8 +131,8 @@ const useStyles = makeStyles({
               <StyledTableCell component="th" scope="row">
                 {card.nif}
               </StyledTableCell>
-              <StyledTableCell align="right">{card.image1}</StyledTableCell>
-              <StyledTableCell align="right">{card.image2}</StyledTableCell>
+              <StyledTableCell align="right">{card.frontData}</StyledTableCell>
+              <StyledTableCell align="right">{card.backData}</StyledTableCell>
               <StyledTableCell align="right">
                 <button onClick={()=> this.handleRemove(card.nif)}>
                   Delete

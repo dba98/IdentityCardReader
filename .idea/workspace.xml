@@ -13,9 +13,14 @@
     <list default="true" id="6bfe1813-9102-4802-a6c8-bece67eaae1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/cardinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/cardinfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/imageText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/imageText.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/IdentityCard.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/IdentityCard.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/gosseract.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/gosseract.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/IdentityCards/appIdentityCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/IdentityCards/AppIdentityCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +101,7 @@
       <workItem from="1610057667060" duration="3752000" />
       <workItem from="1611270388668" duration="4071000" />
       <workItem from="1611492816599" duration="26954000" />
+      <workItem from="1611687602968" duration="11119000" />
     </task>
     <servers />
   </component>
